@@ -1,5 +1,6 @@
 import { Bell } from 'lucide-react';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
 import { useAuthStore } from '@/stores/authStore';
 
 interface HeaderProps {
@@ -28,12 +29,12 @@ export const Header = ({ title, children }: HeaderProps) => {
       </div>
 
       <div className="flex items-center gap-4">
-        <button className="relative p-2 rounded-lg hover:bg-surface-light transition-colors">
+        <Button variant="ghost" size="icon-sm" className="relative">
           <Bell size={18} />
           <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-error rounded-full text-[10px] font-semibold flex items-center justify-center">
             3
           </span>
-        </button>
+        </Button>
 
         <div className="flex items-center gap-3">
           <Avatar className="h-8 w-8">

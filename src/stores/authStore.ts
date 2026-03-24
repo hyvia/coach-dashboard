@@ -19,6 +19,7 @@ export interface User {
   lastName: string;
   role: string;
   clubId: string;
+  clubName: string;
 }
 
 interface AuthState {
@@ -79,6 +80,7 @@ export const loginWithCredentials = async (
       lastName: getUserAttr(attrs, 'family_name'),
       role,
       clubId: getUserAttr(attrs, 'custom:club_id'),
+      clubName: getUserAttr(attrs, 'custom:club_name'),
     },
     token: idToken,
   };
